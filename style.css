@@ -46,7 +46,19 @@ body, html {
     gap: 1%; 
     justify-content: space-between;
 }
-
+.container4{
+    font-family: Arial, sans-serif;
+    color: #0a0a0a;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 1%; 
+    justify-content: space-between;
+}
 .mesa {
     width: 30%;
     box-sizing: border-box;
@@ -64,7 +76,83 @@ body, html {
     word-break: break-word;    
     white-space: normal;  
 }
+
+.portas-container {
+  display: flex;
+  justify-content: center;
+  gap: 2%; /* Espaço entre as portas */
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.porta {
+  flex: 1;
+  max-width: 30%;
+  aspect-ratio: 1 / 1.2; /* Ajuste fino da proporção se necessário */
+  background-image: url('castle-frame.png'); /* imagem estática */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out;
+}
+
 .mesa span {
     display: block;
     margin-bottom: 8px;
+}
+
+/* RESPONSIVIDADE */
+
+/* Telas menores que 1024px */
+@media (max-width: 1024px) {
+    .mesa {
+        width: 45%;
+        padding: 16%;
+    }
+
+    .container2 {
+        font-size: 5vw;
+    }
+    .container4 {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        padding: 5%;
+    }
+}
+
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+    .mesa {
+        width: 100%;
+    }
+
+    .container2 {
+        font-size: 6vw;
+    }
+
+    .container3 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container4 {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        padding: 5%;
+    }
+    
+}
+
+/* Telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    .container2 {
+        font-size: 7vw;
+    }
+
+    .mesa {
+        font-size: 0.95rem;
+    }
 }
